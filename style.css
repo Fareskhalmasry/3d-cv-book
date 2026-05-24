@@ -28,11 +28,8 @@ body:has(.form-container) {
 }
 
 .form-container {
-  margin: auto;
-}
-
-.form-container {
   width: 420px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -144,6 +141,15 @@ button {
   color: #444;
 }
 
+.page span {
+  color: #4da3ff;
+  font-weight: bold;
+}
+
+.page.left #cv-about {
+  margin-bottom: 16px;
+}
+
 .profile-circle {
   width: 110px;
   height: 110px;
@@ -156,73 +162,6 @@ button {
   align-items: center;
   font-size: 32px;
   font-weight: bold;
-}
-
-.page span {
-  color: #4da3ff;
-  font-weight: bold;
-}
-
-.timeline {
-  text-align: left;
-  border-left: 3px solid #4da3ff;
-  padding-left: 18px;
-  margin-bottom: 25px;
-}
-
-.timeline h4 {
-  margin: 8px 0;
-  font-size: 18px;
-}
-
-.cards,
-.skills {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.card,
-.skill {
-  border: 2px solid #d6d6d6;
-  border-radius: 8px;
-  padding: 18px 10px;
-  font-weight: bold;
-  color: #4da3ff;
-  background: #fff;
-}
-
-.project-box {
-  text-align: left;
-}
-
-.project-img {
-  height: 150px;
-  background: linear-gradient(135deg, #4da3ff, #7c4dff);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  margin-bottom: 18px;
-  font-size: 26px;
-}
-
-.corner {
-  position: absolute;
-  bottom: 18px;
-  font-size: 32px;
-  color: #333;
-  cursor: pointer;
-  user-select: none;
-}
-
-.next {
-  right: 22px;
-}
-
-.prev {
-  left: 22px;
 }
 
 .profile-photo {
@@ -259,6 +198,136 @@ button {
 .social-links a:hover {
   transform: translateY(-4px);
   background: #1a2230;
+}
+
+.timeline {
+  text-align: left;
+  border-left: 3px solid #4da3ff;
+  padding-left: 18px;
+  margin-bottom: 25px;
+}
+
+.timeline h4 {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.cards,
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card,
+.skill {
+  border: 2px solid #d6d6d6;
+  border-radius: 8px;
+  padding: 18px 10px;
+  font-weight: bold;
+  color: #4da3ff;
+  background: #fff;
+}
+
+.project-box {
+  width: 100%;
+  text-align: left;
+  padding: 0 18px;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #4da3ff, #7c4dff);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-size: 26px;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.project-img span {
+  color: #fff;
+}
+
+.project-box h4 {
+  width: 85%;
+  margin: 0 auto 8px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+.project-box p {
+  width: 85%;
+  margin: 0 auto;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+.project-box button {
+  margin-top: 14px;
+  margin-left: 8%;
+}
+
+.corner {
+  position: absolute;
+  bottom: 18px;
+  font-size: 32px;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+
+.next {
+  right: 22px;
+}
+
+.prev {
+  left: 22px;
+}
+
+.download-btn {
+  margin-top: 14px;
+}
+
+.project-upload {
+  display: flex;
+  gap: 10px;
+}
+
+.project-upload input {
+  flex: 1;
+}
+
+.upload-btn {
+  min-width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  border-radius: 8px;
+  background: #2d3447;
+  color: #4da3ff;
+  border: 2px dashed #4da3ff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-btn:hover {
+  background: #4da3ff;
+  color: white;
 }
 
 .page.right.turning {
@@ -342,16 +411,15 @@ button {
 
   .profile-photo {
     width: 70px;
-
     height: 70px;
   }
 
   .social-links a {
     width: 28px;
-
     height: 28px;
   }
 }
+
 @media (max-width: 767px) {
   .cv-wrapper {
     padding-top: 0;
@@ -491,49 +559,76 @@ button {
   }
 }
 
-.project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
+@media (max-height: 500px) and (orientation: landscape) {
+  body:has(.cv-wrapper) {
+    height: 100dvh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+  }
 
-.project-img span {
-  color: #fff;
-}
+  .cv-wrapper {
+    padding-top: 0;
+    height: 100dvh;
+    justify-content: center;
+  }
 
-.project-upload {
-  display: flex;
-  gap: 10px;
-}
+  .cv-wrapper h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
 
-.project-upload input {
-  flex: 1;
-}
+  .cv-wrapper h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
 
-.upload-btn {
-  min-width: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 14px;
-  border-radius: 8px;
-  background: #2d3447;
-  color: #4da3ff;
-  border: 2px dashed #4da3ff;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  .book {
+    width: 78vw;
+    height: 48vw;
+    max-height: 70dvh;
+    padding: 6px;
+  }
 
-.upload-btn:hover {
-  background: #4da3ff;
-  color: white;
-}
+  .spread {
+    inset: 6px;
+  }
 
-.download-btn {
-  margin-top: 14px;
-}
+  .page {
+    padding: 10px;
+  }
 
-.page.left #cv-about {
-  margin-bottom: 16px;
+  .page h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .page p,
+  .page span,
+  .timeline h4 {
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
+  .cards,
+  .skills {
+    gap: 6px;
+  }
+
+  .card,
+  .skill {
+    height: 58px;
+    padding: 4px;
+    font-size: 8px;
+  }
+
+  .service-icon {
+    font-size: 14px;
+  }
+
+  .card button,
+  .skill button {
+    padding: 3px 6px;
+    font-size: 7px;
+  }
 }
