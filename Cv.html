@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Book</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+
+  <body>
+    <div class="cv-wrapper">
+      <h1>3D CV Book Website</h1>
+      <h2>Using HTML CSS JS</h2>
+
+      <div class="book">
+        <div class="spread active">
+          <div class="page left">
+            <img id="cv-photo" class="profile-photo" />
+            <div class="social-links" id="social-links"></div>
+            <h3 id="cv-name"></h3>
+            <span id="cv-job"></span>
+            <p id="cv-about"></p>
+            <button onclick="downloadPDF()">Download Cv</button>
+          </div>
+
+          <div class="page right">
+            <h3>Work Experience</h3>
+            <div class="timeline">
+              <span>2023 - 2026</span>
+              <h4 id="cv-experience"></h4>
+              <p>Professional experience and practical work details.</p>
+            </div>
+            <div class="corner next" onclick="nextSpread()">›</div>
+          </div>
+        </div>
+
+        <div class="spread">
+          <div class="page left">
+            <h3>Education</h3>
+            <div class="timeline">
+              <span>Education</span>
+              <h4 id="cv-education"></h4>
+              <p>Academic background and university information.</p>
+            </div>
+            <div class="corner prev" onclick="prevSpread()">‹</div>
+          </div>
+
+          <div class="page right">
+            <h3>My Services</h3>
+            <div class="cards" id="cv-services"></div>
+            <div class="corner next" onclick="nextSpread()">›</div>
+          </div>
+        </div>
+
+        <div class="spread">
+          <div class="page left">
+            <h3>My Skills</h3>
+            <div class="skills" id="cv-skills"></div>
+            <div class="corner prev" onclick="prevSpread()">‹</div>
+          </div>
+
+          <div class="page right">
+            <h3>Latest Project</h3>
+            <div class="project-box">
+              <div class="project-img" id="project-img">
+                <span>Project</span>
+              </div>
+              <h4 id="cv-project"></h4>
+              <p>Project created using modern web technologies.</p>
+              <button>Source Code</button>
+            </div>
+            <div class="corner next" onclick="nextSpread()">›</div>
+          </div>
+        </div>
+
+        <div class="spread">
+          <div class="page left">
+            <h3>Contact</h3>
+            <p id="cv-email"></p>
+            <p id="cv-phone"></p>
+            <div class="corner prev" onclick="prevSpread()">‹</div>
+          </div>
+
+          <div class="page right">
+            <h3>Thank You</h3>
+            <p>Thanks for reading my CV Book.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

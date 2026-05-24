@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create CV</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="form-container">
+      <h1>Create Your CV Book</h1>
+
+      <input id="name" type="text" placeholder="Full Name" />
+      <input id="job" type="text" placeholder="Job Title" />
+      <textarea id="about" placeholder="About Me"></textarea>
+      <input id="education" type="text" placeholder="Education" />
+      <input id="experience" type="text" placeholder="Work Experience" />
+      <input id="skills" type="text" placeholder="Skills" />
+      <input id="services" type="text" placeholder="Services" />
+      <div class="project-upload">
+        <input id="project" type="text" placeholder="Latest Project" />
+        <label for="project-image" class="upload-btn">Add Image</label>
+        <input id="project-image" type="file" accept="image/*" hidden />
+      </div>
+      <input id="email" type="email" placeholder="Email" />
+      <input id="phone" type="text" placeholder="Phone" />
+      <input id="facebook" type="url" placeholder="Facebook Link" />
+      <input id="instagram" type="url" placeholder="Instagram Link" />
+      <input id="linkedin" type="url" placeholder="LinkedIn Link" />
+      <input id="github" type="url" placeholder="GitHub Link" />
+      <label for="photo" class="upload-btn"> Upload Profile Photo </label>
+      <input id="photo" type="file" accept="image/*" hidden />
+
+      <button onclick="saveData()">Generate CV Book</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
