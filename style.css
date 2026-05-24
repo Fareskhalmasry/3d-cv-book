@@ -305,47 +305,55 @@ button {
 @media (max-width: 600px) {
   .book {
     width: 96vw;
-    height: 62vw;
+    aspect-ratio: 1.6;
+    height: auto;
   }
 
   .page {
-    padding: 14px;
+    padding: 10px;
   }
 
   .page h3 {
-    font-size: 18px;
+    font-size: 12px;
     margin-bottom: 12px;
   }
 
   .page p,
+  .page span,
   .timeline h4 {
-    font-size: 12px;
+    font-size: 9px;
   }
 
   .profile-photo {
-    width: 70px;
-    height: 70px;
-    margin: 8px auto;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 8px;
+  }
+
+  .social-links {
+    gap: 6px;
+  }
+
+  .social-links a {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
   }
 
   .cards,
   .skills {
-    gap: 8px;
+    gap: 6px;
   }
 
   .card,
   .skill {
-    padding: 8px;
-    font-size: 11px;
-  }
-
-  .service-icon {
-    font-size: 20px;
+    padding: 6px;
+    font-size: 9px;
   }
 
   button {
-    padding: 8px 12px;
-    font-size: 11px;
+    padding: 6px 10px;
+    font-size: 9px;
   }
 }
 
