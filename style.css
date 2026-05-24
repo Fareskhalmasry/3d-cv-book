@@ -6,14 +6,24 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  align-items: flex-start;
   background: #211c2f;
   color: #fff;
-  margin: 0;
+  padding: 40px 0;
+}
+
+body:has(.cv-wrapper) {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  align-items: center;
+}
+
+body:has(.form-container) {
+  overflow: auto;
 }
 
 .form-container {
@@ -62,13 +72,12 @@ button {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding-top: 30px;
 }
 
 .cv-wrapper h2 {
-  margin: 10px 0 45px;
+  margin: 10px 0 28px;
   font-size: 42px;
 }
 
@@ -287,7 +296,7 @@ button {
   }
 }
 
-@media (max-width: 900px) and (max-device-width: 430px) {
+@media (max-width: 900px) and (min-width: 431px) {
   body {
     min-height: 100vh;
     padding: 20px 0;
@@ -305,182 +314,181 @@ button {
   }
 
   .book {
-    width: 98vw;
-    height: 64vw;
-    padding: 10px;
+    width: 92vw;
+
+    height: 58vw;
+
+    padding: 16px;
+
     border-radius: 12px;
+
     box-shadow:
       0 0 0 4px #1a2230,
       0 0 25px rgba(77, 163, 255, 0.45);
   }
 
   .spread {
-    inset: 10px;
+    inset: 16px;
   }
 
   .page {
-    padding: 14px;
+    padding: 18px;
   }
 
   .page h3 {
-    font-size: 17px;
-    margin-bottom: 12px;
+    font-size: 18px;
   }
 
   .page p {
-    font-size: 12px;
-    line-height: 1.35;
-  }
-
-  .page span {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .profile-photo {
-    width: 58px;
-    height: 58px;
-    margin: 0 auto 8px;
-  }
+    width: 70px;
 
-  .social-links {
-    gap: 6px;
-    margin-bottom: 10px;
+    height: 70px;
   }
 
   .social-links a {
-    width: 26px;
-    height: 26px;
-    font-size: 12px;
-  }
+    width: 28px;
 
-  .timeline {
-    padding-left: 10px;
-    margin-bottom: 0;
-  }
-
-  .timeline h4 {
-    font-size: 12px;
-    margin: 6px 0;
-  }
-
-  .corner {
-    bottom: 10px;
-    font-size: 28px;
-  }
-
-  button {
-    padding: 6px 12px;
-    font-size: 10px;
+    height: 28px;
   }
 }
+@media (max-width: 767px) {
+  .cv-wrapper {
+    padding-top: 0;
+    justify-content: center;
+  }
 
-@media (max-width: 430px) {
   .cv-wrapper h1 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 6px;
   }
 
   .cv-wrapper h2 {
-    font-size: 20px;
-    margin-bottom: 18px;
+    font-size: 17px;
+    margin-bottom: 14px;
   }
 
   .book {
-    width: 100vw;
-    height: 66vw;
-    padding: 8px;
+    width: 98vw;
+    height: 68vw;
+    padding: 6px;
     border-radius: 10px;
   }
 
   .spread {
-    inset: 8px;
+    inset: 6px;
+    flex-direction: row;
   }
 
   .page {
-    padding: 10px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 100%;
+    padding: 7px;
+    overflow: hidden;
   }
 
   .page h3 {
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 13px;
+    margin-bottom: 7px;
   }
 
   .page p,
   .page span,
   .timeline h4 {
-    font-size: 10px;
-    line-height: 1.35;
+    font-size: 8px;
+    line-height: 1.25;
   }
 
   .profile-photo {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 8px;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 5px;
   }
 
   .social-links {
-    gap: 5px;
-    margin-bottom: 8px;
+    gap: 4px;
+    margin-bottom: 6px;
   }
 
   .social-links a {
-    width: 24px;
-    height: 24px;
-    font-size: 10px;
+    width: 21px;
+    height: 21px;
+    font-size: 9px;
   }
 
   .cards,
   .skills {
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
+    gap: 4px;
   }
 
   .card,
   .skill {
-    padding: 6px;
-    font-size: 8px;
+    height: 54px;
+    padding: 3px;
+    font-size: 7px;
+  }
+
+  .service-icon {
+    font-size: 12px;
+    margin-bottom: 2px;
   }
 
   .card h4,
   .skill h4 {
-    font-size: 8px;
-    margin: 4px 0;
+    font-size: 7px;
+    margin: 2px 0;
+    line-height: 1;
+  }
+
+  .card button,
+  .skill button {
+    padding: 3px 5px;
+    font-size: 6px;
   }
 
   .project-img {
-    height: 75px;
-    margin-bottom: 8px;
-    font-size: 14px;
+    height: 55px;
+    margin-bottom: 5px;
+    font-size: 12px;
   }
 
   .project-box h4 {
-    font-size: 10px;
-    margin-bottom: 5px;
+    font-size: 9px;
+    margin-bottom: 4px;
   }
 
   .project-box p {
-    font-size: 9px;
+    font-size: 8px;
+    line-height: 1.15;
   }
 
   .timeline {
-    padding-left: 8px;
+    padding-left: 7px;
+    margin-bottom: 0;
   }
 
   .timeline span {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .timeline p {
-    font-size: 9px;
+    font-size: 8px;
   }
 
   button {
-    padding: 5px 10px;
-    font-size: 9px;
+    padding: 4px 8px;
+    font-size: 8px;
   }
 
   .corner {
-    bottom: 8px;
-    font-size: 24px;
+    bottom: 5px;
+    font-size: 22px;
   }
 }
 
