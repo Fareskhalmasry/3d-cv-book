@@ -283,22 +283,10 @@ button {
 
 @media (max-width: 900px) {
   .book {
-    width: 90vw;
-    height: 57vw;
-    max-height: 520px;
-  }
-
-  .cv-wrapper h1 {
-    font-size: 32px;
-  }
-
-  .cv-wrapper h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .page {
-    padding: 24px;
+    width: 95vw;
+    height: auto;
+    aspect-ratio: 1.6;
+    max-height: none;
   }
 }
 
