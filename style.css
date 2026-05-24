@@ -16,10 +16,11 @@ body {
 }
 
 body:has(.cv-wrapper) {
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   padding: 0;
   align-items: center;
+  justify-content: center;
 }
 
 body:has(.form-container) {
@@ -315,13 +316,9 @@ button {
 
   .book {
     width: 92vw;
-
     height: 58vw;
-
     padding: 16px;
-
     border-radius: 12px;
-
     box-shadow:
       0 0 0 4px #1a2230,
       0 0 25px rgba(77, 163, 255, 0.45);
@@ -372,8 +369,10 @@ button {
   }
 
   .book {
-    width: 98vw;
-    height: 68vw;
+    width: min(98vw, 100dvh * 1.55);
+    height: min(63vw, 72dvh);
+    max-width: 100vw;
+    max-height: 72dvh;
     padding: 6px;
     border-radius: 10px;
   }
@@ -387,8 +386,8 @@ button {
     flex: 0 0 50%;
     max-width: 50%;
     height: 100%;
-    padding: 7px;
     overflow: hidden;
+    padding: 6px;
   }
 
   .page h3 {
@@ -529,4 +528,12 @@ button {
 .upload-btn:hover {
   background: #4da3ff;
   color: white;
+}
+
+.download-btn {
+  margin-top: 14px;
+}
+
+.page.left #cv-about {
+  margin-bottom: 16px;
 }
