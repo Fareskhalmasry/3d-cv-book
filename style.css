@@ -282,19 +282,111 @@ button {
 }
 
 @media (max-width: 900px) {
+  body {
+    min-height: 100vh;
+    padding: 20px 0;
+    align-items: center;
+  }
+
+  .cv-wrapper h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .cv-wrapper h2 {
+    font-size: 22px;
+    margin-bottom: 22px;
+  }
+
   .book {
-    width: 95vw;
-    height: auto;
-    aspect-ratio: 1.6;
-    max-height: none;
+    width: 98vw;
+    height: 64vw;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow:
+      0 0 0 4px #1a2230,
+      0 0 25px rgba(77, 163, 255, 0.45);
+  }
+
+  .spread {
+    inset: 10px;
+  }
+
+  .page {
+    padding: 14px;
+  }
+
+  .page h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .page p {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .page span {
+    font-size: 12px;
+  }
+
+  .profile-photo {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 8px;
+  }
+
+  .social-links {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .social-links a {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+
+  .timeline {
+    padding-left: 10px;
+    margin-bottom: 0;
+  }
+
+  .timeline h4 {
+    font-size: 12px;
+    margin: 6px 0;
+  }
+
+  .corner {
+    bottom: 10px;
+    font-size: 28px;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 10px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 430px) {
+  .cv-wrapper h1 {
+    font-size: 24px;
+  }
+
+  .cv-wrapper h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
   .book {
-    width: 96vw;
-    aspect-ratio: 1.6;
-    height: auto;
+    width: 100vw;
+    height: 66vw;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .spread {
+    inset: 8px;
   }
 
   .page {
@@ -302,46 +394,23 @@ button {
   }
 
   .page h3 {
-    font-size: 12px;
-    margin-bottom: 12px;
+    font-size: 15px;
   }
 
   .page p,
   .page span,
   .timeline h4 {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .profile-photo {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 8px;
-  }
-
-  .social-links {
-    gap: 6px;
+    width: 52px;
+    height: 52px;
   }
 
   .social-links a {
-    width: 26px;
-    height: 26px;
-    font-size: 11px;
-  }
-
-  .cards,
-  .skills {
-    gap: 6px;
-  }
-
-  .card,
-  .skill {
-    padding: 6px;
-    font-size: 9px;
-  }
-
-  button {
-    padding: 6px 10px;
-    font-size: 9px;
+    width: 24px;
+    height: 24px;
   }
 }
 
